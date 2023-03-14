@@ -40,6 +40,7 @@ let imgSlide = [
 
 let slider = document.getElementById('slider');
 let slideTemplate = '';
+let slideIndex = 0;
 
 for (let i = 0; i < imgSlide.length; i++) {
     
@@ -53,7 +54,10 @@ for (let i = 0; i < imgSlide.length; i++) {
 
 slider.innerHTML += slideTemplate;
 
-document.querySelector('.slide').classList.add('active');
+let slides= document.querySelectorAll('.slide');
+console.log(slides);
+slides[slideIndex].classList.add('active');
+
 
 let btnDown = document.querySelector('.down');
 let btnUp = document.querySelector('.up');
@@ -62,3 +66,17 @@ let btnUp = document.querySelector('.up');
 
 btnDown.addEventListener('click', changeDown);
 btnUp.addEventListener('click', changeUp);
+
+function changeDown(){
+
+
+    slides[slideIndex].classList.remove('active');
+    slideIndex++;
+    slides[slideIndex].classList.add('active');
+
+
+}
+
+function changeUp(){
+    
+}
