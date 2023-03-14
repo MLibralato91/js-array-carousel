@@ -68,12 +68,17 @@ btnDown.addEventListener('click', changeDown);
 btnUp.addEventListener('click', changeUp);
 
 function changeDown(){
-
-
     slides[slideIndex].classList.remove('active');
+    if (slideIndex === (slides.length -1)) {
+        
+        slideIndex = 0;
+        slides[slideIndex].classList.add('active');
+    }else{
     slideIndex++;
     slides[slideIndex].classList.add('active');
-
+    }
+ console.log(slideIndex);
+ console.log(slides.length);
 
 }
 
