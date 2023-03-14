@@ -36,7 +36,7 @@ let imgSlide = [
     './img/05.webp'
 ]
 
-console.log(imgSlide);
+// console.log(imgSlide);
 
 let slider = document.getElementById('slider');
 let slideTemplate = '';
@@ -48,7 +48,17 @@ for (let i = 0; i < imgSlide.length; i++) {
         <img src="${imgSlide[i]}" alt="Img ${i + 1}">
     </div>
     `
-    console.log(slideTemplate);
+    // console.log(slideTemplate);
 }
 
 slider.innerHTML += slideTemplate;
+
+document.querySelector('.slide').classList.add('active');
+
+let btnDown = document.querySelector('.down');
+let btnUp = document.querySelector('.up');
+
+//console.log(btnDown, btnUp);
+
+btnDown.addEventListener('click', changeDown);
+btnUp.addEventListener('click', changeUp);
