@@ -54,7 +54,7 @@ for (let i = 0; i < imgSlide.length; i++) {
     `
     // console.log(slideTemplate);
 }
-slider.innerHTML += slideTemplate; //Aggiiungo le slide su html
+slider.innerHTML += slideTemplate; //Aggiungo le slide su html
 
 for (let i = 0; i < imgSlide.length; i++) {
     
@@ -65,11 +65,15 @@ for (let i = 0; i < imgSlide.length; i++) {
     `
     // console.log(slideTemplate);
 }
-preview.innerHTML += boxTemplate;
+preview.innerHTML += boxTemplate; //Aggiungo le preview su html
 
 let slides= document.querySelectorAll('.slide');
 console.log(slides);
 slides[slideIndex].classList.add('active');
+
+let myBox = document.querySelectorAll ('.boxPreview');
+console.log(myBox);
+myBox[slideIndex].classList.add('activeBox');
 
 
 let btnDown = document.querySelector('.down');
