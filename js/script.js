@@ -6,7 +6,8 @@ Dato un array contenente una lista di cinque immagini, creare un carosello come 
 ---------------------------------------------------------
 MILESTONE 1
 
-Per prima cosa, creiamo il markup statico: costruiamo il container e inseriamo un'immagine grande al centro: avremo così la struttura base e gli stili pronti per poterci poi concentrare solamente sull'aspetto logico.
+Per prima cosa, creiamo il markup statico: costruiamo il container e inseriamo un'immagine grande al centro: avremo così la struttura base e gli stili pronti per poterci poi concentrare solamente sull'aspetto logico. 
+--DONE--
 -----------------------------------------------------------
 MILESTONE 2
 
@@ -24,6 +25,30 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 
 `
 <div class="slide">
-    <img src="./img/01.webp" alt="Img1">
+    <img src="" alt="Img1">
 </div>
 `
+let imgSlide = [
+    './img/01.webp',
+    './img/02.webp',
+    './img/03.webp',
+    './img/04.webp',
+    './img/05.webp'
+]
+
+console.log(imgSlide);
+
+let slider = document.getElementById('slider');
+let slideTemplate = '';
+
+for (let i = 0; i < imgSlide.length; i++) {
+    
+    slideTemplate += `
+    <div class="slide">
+        <img src="${imgSlide[i]}" alt="Img ${i + 1}">
+    </div>
+    `
+    console.log(slideTemplate);
+}
+
+slider.innerHTML += slideTemplate;
