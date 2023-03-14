@@ -77,11 +77,18 @@ function changeDown(){
     slideIndex++;
     slides[slideIndex].classList.add('active');
     }
- console.log(slideIndex);
- console.log(slides.length);
+//  console.log(slideIndex);
+//  console.log(slides.length);
 
 }
 
 function changeUp(){
-    
+    slides[slideIndex].classList.remove('active');
+   if(slideIndex === 0){
+    slideIndex = slides.length -1;
+    slides[slideIndex].classList.add('active');
+   }else{
+    slideIndex--;
+    slides[slideIndex].classList.add('active');
+   }
 }
