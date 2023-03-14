@@ -14,18 +14,19 @@ MILESTONE 2
 Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini dinamicamente servendoci dell'array fornito e un semplice ciclo for che concatena un template literal.
 Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile.
 Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.
+--DONE--
 -----------------------------------------------------------
 MILESTONE 3
 
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
-
+--DONE--
 */
 
 
 
 `
-<div class="slide">
-    <img src="" alt="Img1">
+<div class="boxPreview">
+    <img src="./img/01.webp" alt="img1">
 </div>
 `
 let imgSlide = [
@@ -40,6 +41,8 @@ let imgSlide = [
 
 let slider = document.getElementById('slider');
 let slideTemplate = '';
+let preview = document.getElementById('preview');
+let boxTemplate = '';
 let slideIndex = 0;
 
 for (let i = 0; i < imgSlide.length; i++) {
@@ -51,8 +54,18 @@ for (let i = 0; i < imgSlide.length; i++) {
     `
     // console.log(slideTemplate);
 }
+slider.innerHTML += slideTemplate; //Aggiiungo le slide su html
 
-slider.innerHTML += slideTemplate;
+for (let i = 0; i < imgSlide.length; i++) {
+    
+    boxTemplate += `
+    <div class="boxPreview">
+        <img src="${imgSlide[i]}" alt="Img ${i + 1}">
+    </div>
+    `
+    // console.log(slideTemplate);
+}
+preview.innerHTML += boxTemplate;
 
 let slides= document.querySelectorAll('.slide');
 console.log(slides);
