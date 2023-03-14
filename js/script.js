@@ -23,12 +23,6 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 */
 
 
-
-`
-<div class="boxPreview">
-    <img src="./img/01.webp" alt="img1">
-</div>
-`
 let imgSlide = [
     './img/01.webp',
     './img/02.webp',
