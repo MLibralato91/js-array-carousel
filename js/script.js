@@ -78,15 +78,14 @@ function changeDown(){
     slides[slideIndex].classList.remove('active');
     myBox[slideIndex].classList.remove('activeBox');
     if (slideIndex === (slides.length -1)) {
-        
         slideIndex = 0;
-        slides[slideIndex].classList.add('active');
-        myBox[slideIndex].classList.add('activeBox');
+       
     }else{
     slideIndex++;
+    
+    }
     slides[slideIndex].classList.add('active');
     myBox[slideIndex].classList.add('activeBox');
-    }
 //  console.log(slideIndex);
 //  console.log(slides.length);
 
@@ -98,13 +97,11 @@ function changeUp(){
 
    if(slideIndex === 0){
     slideIndex = slides.length -1;
-    slides[slideIndex].classList.add('active');
-    myBox[slideIndex].classList.add('activeBox');
 
    }else{
     slideIndex--;
-    slides[slideIndex].classList.add('active');
-    myBox[slideIndex].classList.add('activeBox');
 
    }
+    slides[slideIndex].classList.add('active');
+    myBox[slideIndex].classList.add('activeBox');
 }

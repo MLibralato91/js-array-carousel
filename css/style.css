@@ -12,22 +12,17 @@
     width: 750px;
     height: 500px;
     background-color: rgb(91, 89, 89);
-    
-    
 }
 .slide{
     width: 100%;
     height: 100%;
     display: none;
-    
 }
 
 .slide img{
     width: 100%;
     height: 500px;
     object-fit: cover;
-    
-    
 }
 
 .active{
@@ -39,9 +34,6 @@
     height: 100px;
     opacity: 0.5;
     border: 5px solid rgba(250, 248, 248, 0);
-    
-    
- 
 }
 #preview{
     position: relative;
@@ -49,7 +41,6 @@
 .boxPreview img{
     width: 100%;
     height: calc(100px - 10px);
-
     object-fit: cover;
     
 }
