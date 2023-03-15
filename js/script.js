@@ -46,12 +46,6 @@ for (let i = 0; i < imgSlide.length; i++) {
         <img src="${imgSlide[i]}" alt="Img ${i + 1}">
     </div>
     `
-    // console.log(slideTemplate);
-}
-slider.innerHTML += slideTemplate; //Aggiungo le slide su html
-
-for (let i = 0; i < imgSlide.length; i++) {
-    
     boxTemplate += `
     <div class="boxPreview">
         <img src="${imgSlide[i]}" alt="Img ${i + 1}">
@@ -59,6 +53,8 @@ for (let i = 0; i < imgSlide.length; i++) {
     `
     // console.log(slideTemplate);
 }
+slider.innerHTML += slideTemplate; //Aggiungo le slide su html
+
 preview.innerHTML += boxTemplate; //Aggiungo le preview su html
 
 let slides= document.querySelectorAll('.slide');
