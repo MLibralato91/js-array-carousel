@@ -105,3 +105,5 @@ function changeUp(){
     slides[slideIndex].classList.add('active');
     myBox[slideIndex].classList.add('activeBox');
 }
+
+const autoplay = setInterval(changeDown, 2000);
